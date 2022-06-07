@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <main class="rate-card">
+      <!-- Rating state start -->
+      <div class="rate-card__container">
+        <div id="rate-card">
+          <img
+            class="rate-card__star-decoration"
+            src="/images/icon-star.svg"
+            alt="star icon"
+          />
+          <h1 class="rate-card__title">How did we do?</h1>
+          <p class="rate-card__description">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+          <ul class="rate-card__rate-buttons">
+            <li class="rate-card__rate-button">1</li>
+            <li class="rate-card__rate-button">2</li>
+            <li class="rate-card__rate-button">3</li>
+            <li class="rate-card__rate-button">4</li>
+            <li class="rate-card__rate-button">5</li>
+          </ul>
+          <button onclick="submit()" class="rate-card__submit-button">
+            Submit
+          </button>
+        </div>
+        <!-- Rating state end -->
+
+        <!-- Thank you state start -->
+        <div
+          id="thank-you-card"
+          class="rate-card__thank-you-container"
+          style="display: none"
+        >
+          <img
+            class="rate-card__thanks-illustration"
+            src="/images/illustration-thank-you.svg"
+            alt="cellphone illustration"
+          />
+          <div class="rate-card__selected-tag">
+            You selected <span id="selectedValue">4</span> out of 5
+          </div>
+          <span class="rate-card__title">Thank you!</span>
+          <!-- Add rating here -->
+          <p class="rate-card__description" style="text-align: center">
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don't hesitate to get in touch!
+          </p>
+        </div>
+      </div>
+      <!-- Thank you state end -->
+    </main>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
+  </body>
+</html>
